@@ -1,0 +1,44 @@
+.list-1,
+.list-2,
+.list-3,
+.list-4,
+.list-5,
+.list-6 {
+	display: grid;
+}
+
+.list-1 {
+	gap: 50px;
+	grid-template-columns: 1fr 350px;
+}
+
+.list-2,
+.list-4,
+.list-6 {
+	gap: 35px;
+}
+
+.list-2,
+.list-5 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.list-3 {
+	>div {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.list-4 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.list-5 {
+	gap: 45px 50px;
+}
+
+.list-6 {
+	grid-template-columns: repeat(3, 1fr);
+}

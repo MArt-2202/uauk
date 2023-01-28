@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+//=include('layouts/head.html')
+
+<body itemscope itemtype="http://schema.org/WebPage">
+	//=include('layouts/schemaOrgInfo.html')
+	//=include('layouts/header.html')
+	<main>
+		<!-- CONTAINER -->
+		<div class="container-md">
+			//=include('html_modules/_members.html')
+		</div><!-- END CONTAINER -->
+		<section class="style-1 persons" id="persons">
+			<!-- CONTAINER -->
+			<div class="container-md">
+				<h2 data-title="Persons">Persons</h2>
+				<div class="tabs">
+					<ul class="tabs__list">
+						<li>Ukraine</li>
+						<li>United Kingdom</li>
+					</ul>
+					<div class="tabs__content">
+						<div>
+							//=include('html_modules/_persons-slider-1.html')
+						</div>
+						<div>
+							//=include('html_modules/_persons-slider-2.html')
+						</div>
+					</div>
+				</div>
+			</div><!-- END CONTAINER -->
+		</section>
+		<!-- CONTAINER -->
+		<div class="container-md">
+			//=include('html_modules/_news.html')
+		</div><!-- END CONTAINER -->
+	</main>
+	//=include('layouts/footer.html')
+	//=include('html_modules/_modal.html')
+	//=include('layouts/afterFooterContent.html')
+</body>
+
+</html>
