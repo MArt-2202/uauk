@@ -1,16 +1,15 @@
 export default function blockStyles() {
 	if (document.querySelector('.top-section')) {
 		document.body.classList.add('index');
+		document.querySelector('header').style.opacity = 1;
 	} else {
 		document.body.classList.add('inner');
+		document.querySelector('header').style.opacity = 1;
 	}
-	if (document.querySelector('header')) {
-		if (window.matchMedia('(min-width: 1201px)').matches) {
-			document.querySelector('header').style.opacity = 1;
-		}
-		if (window.matchMedia('(max-width: 1200px)').matches) {
-			document.querySelector('header').style.opacity = '';
-		}
+	if (document.querySelector('.top-section')) {
+		document.body.classList.add('index');
+	} else {
+		document.body.classList.add('inner');
 	}
 	if (document.querySelector('.header__bl-2') && document.querySelector('.top-section__content')) {
 		const bl1 = document.querySelector('.header__bl-2'),
