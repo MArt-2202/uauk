@@ -55,14 +55,9 @@ export default function blockStyles() {
 		});
 	}
 
-	if (document.querySelector('.about-2')) {
-		const info = document.querySelector('.about-2');
-		if (window.matchMedia('(min-width: 1025px)').matches) {
-			info.style.paddingBottom = `${info.offsetWidth / 1.97}px`;
-		}
+	if (document.querySelector('#about-2')) {
+		const info = document.querySelector('#about-2');
 
-		if (window.matchMedia('(max-width: 1024px)').matches) {
-			info.style.paddingBottom = '';
-		}
+		info.style.paddingBottom = `${info.offsetWidth / 1.97}px`;
 	}
 }
