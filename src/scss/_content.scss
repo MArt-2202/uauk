@@ -82,6 +82,7 @@
 @media (max-width: 1024px) {
 
 	.content-1,
+	.content-3,
 	.content-4,
 	.content-5 {
 		flex-direction: column;
@@ -946,6 +947,20 @@
 		.tabs__list+.tabs__content {
 			margin-top: -55px;
 		}
+	}
+
+	.person-details__aside,
+	.person-details__main {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.person-details__aside {
+		width: calc(min(245px, 100%));
+	}
+
+	.person-details__main {
+		max-width: 640px;
 	}
 }
 
