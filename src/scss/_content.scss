@@ -549,7 +549,7 @@
 
 @media (max-width: 576px) {
 	.news h3+span {
-		margin-left: 20px;
+		padding-left: 15px;
 	}
 
 	.news h3+span+.news__list {
@@ -580,7 +580,7 @@
 
 @media (max-width: 360px) {
 	.news h3+span {
-		margin-left: 15px;
+		padding-left: 12px;
 
 		+.news__list {
 			margin-top: -5px;
