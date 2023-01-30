@@ -231,6 +231,26 @@ h3 {
 	}
 }
 
+@media (max-width: 576px) {
+	h3 {
+		&[data-title] {
+			&+span {
+				margin-top: -14px;
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	h3 {
+		&[data-title] {
+			&+span {
+				margin-top: -10px;
+			}
+		}
+	}
+}
+
 a {
 	color: $c8;
 	text-decoration: none;
