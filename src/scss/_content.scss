@@ -81,6 +81,7 @@
 
 @media (max-width: 1024px) {
 
+	.content-1,
 	.content-4,
 	.content-5 {
 		flex-direction: column;
@@ -764,24 +765,71 @@
 }
 
 @media (max-width: 576px) {
-	.activities-list-1 {
+
+	.activities-list-1,
+	.activities-list-2 {
 		a {
-			padding-left: 20px;
 			padding-right: 20px;
 		}
 
 		strong {
-			min-height: 40px;
 			font-size: fsz(14, 12);
+		}
+	}
+
+	.activities-list-1 {
+		a {
+			padding-top: 23px;
+			padding-left: 20px;
+
+			>div {
+				&:first-child {
+					padding-top: 20px;
+				}
+			}
+		}
+	}
+
+	.activities-list-2 {
+		a {
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			>div {
+				&:first-child {
+					width: 110px;
+				}
+			}
 		}
 	}
 }
 
 @media (max-width: 360px) {
+
+	.activities-list-1,
+	.activities-list-2 {
+		a {
+			padding-right: 15px;
+		}
+
+		strong {
+			font-size: 1rem;
+		}
+	}
+
 	.activities-list-1 {
 		a {
 			padding-left: 15px;
-			padding-right: 15px;
+		}
+	}
+
+	.activities-list-2 {
+		a {
+			>div {
+				&:first-child {
+					width: 105px;
+				}
+			}
 		}
 	}
 }
