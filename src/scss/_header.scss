@@ -295,7 +295,7 @@ header {
 
 		li {
 			&:not(:last-child) {
-				margin-bottom: 47px;
+				margin-bottom: 44px;
 			}
 		}
 
@@ -328,5 +328,20 @@ header {
 		padding-right: 15px;
 		background-position: calc(100% - 15px) calc(100% - 15px);
 		background-size: calc(100% - 30px) auto;
+	}
+}
+
+@media (max-width: 320px) {
+	.main-nav {
+		li {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+
+		a {
+			font-size: fsz(20, 12);
+
+		}
 	}
 }
