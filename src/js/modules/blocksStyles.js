@@ -6,6 +6,22 @@ export default function blockStyles() {
 		document.body.classList.add('inner');
 		document.querySelector('header').style.opacity = 1;
 	}
+	if (document.querySelector('.top-section') && document.querySelector('.top-section__content')) {
+		const container = document.querySelector('.top-section'),
+			item = document.querySelector('.top-section__content');
+
+		if (window.matchMedia('(max-width: 1200px)').matches) {
+			container.style.backgroundSize = `auto ${
+				container.offsetHeight - item.offsetHeight - 115
+			}px`;
+			document.querySelector('.top-section').classList.add('top-section--mobile');
+		}
+		if (window.matchMedia('(min-width: 1201px)').matches) {
+			container.style.backgroundSize = '';
+			document.querySelector('.top-section').classList.remove('top-section--mobile');
+		}
+	}
+
 	if (document.querySelector('.top-section')) {
 		document.body.classList.add('index');
 	} else {
