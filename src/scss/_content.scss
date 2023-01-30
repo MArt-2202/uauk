@@ -985,6 +985,10 @@
 		span {
 			font-size: fsz(11, 12);
 		}
+
+		.list-img+div {
+			padding-left: mp(20, 258);
+		}
 	}
 }
 
@@ -1017,6 +1021,13 @@
 	.persons__slider-wrapper {
 		.slider-btn {
 			top: calc(40% - 17px);
+		}
+	}
+
+	.persons__list {
+		.list-img+div {
+			padding-top: 12px;
+			padding-left: mp(15, 158);
 		}
 	}
 }
