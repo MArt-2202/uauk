@@ -196,6 +196,33 @@ h3 {
 	}
 }
 
+@media (max-width: 1024px) {
+	[data-title] {
+
+		&+span {
+			font-size: fsz(80, 12);
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	[data-title] {
+
+		&+span {
+			font-size: fsz(60, 12);
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	[data-title] {
+
+		&+span {
+			font-size: fsz(40, 12);
+		}
+	}
+}
+
 h3 {
 	&[data-title] {
 		&+span {
