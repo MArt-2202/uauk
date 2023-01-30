@@ -17,6 +17,7 @@ export default function sliders() {
 					}
 				},
 			},
+			autoHeight: true,
 			loop: true,
 			slidesPerView: 4,
 			spaceBetween: 50,
