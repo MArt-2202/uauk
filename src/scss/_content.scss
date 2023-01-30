@@ -222,7 +222,7 @@
 
 @media (max-width: 1200px) {
 	.top-section {
-		margin-top: -124px;
+		margin-top: -116px;
 		background-color: $c6;
 
 		&.top-section--mobile {
@@ -988,8 +988,19 @@
 	}
 }
 
+@media (max-width: 415px) {
+	.persons__slider-wrapper {
+		.slider-btn {
+			transform: rotate(45deg);
+			top: calc(41.5% - 17px);
+		}
+	}
+}
+
 @media (max-width: 360px) {
 	.persons {
+		padding-top: 70px;
+
 		h2 {
 			font-size: fsz(24, 12);
 
@@ -1001,6 +1012,20 @@
 
 	.persons .tabs__list {
 		margin-top: -20px;
+	}
+
+	.persons__slider-wrapper {
+		.slider-btn {
+			top: calc(40% - 17px);
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.persons__slider-wrapper {
+		.slider-btn {
+			top: calc(38% - 17px);
+		}
 	}
 }
 
