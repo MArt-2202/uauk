@@ -11,28 +11,6 @@ header {
 	}
 }
 
-// .header__logo-company {
-// 	path {
-// 		transition: all 0.55s cubic-bezier(0.86, 0, 0.07, 1);
-// 	}
-// }
-
-// .header__bl-1,
-// .header__bl-3,
-// .header__lang,
-// .header__modal-btn,
-// .toggle-btn {
-// 	z-index: 999;
-// }
-
-// .header__bl-1,
-// .header__bl-3,
-// .header__lang,
-// .header__modal-btn {
-// 	position: relative;
-// }
-
-
 .logo-company {
 	display: inline-block;
 	text-decoration: none;
@@ -46,12 +24,8 @@ header {
 .lang {
 	margin-bottom: 0;
 
-	li,
 	a {
 		display: inline-block;
-	}
-
-	a {
 		line-height: 1;
 		color: $c1;
 
@@ -62,16 +36,9 @@ header {
 	}
 }
 
-.main-nav {
-	li {
-		&:not(:last-child) {
-			margin-right: 19px;
-		}
-	}
-}
-
 .lang {
 	li {
+		display: inline-block;
 		margin-right: 10px;
 
 		&:last-child {
@@ -141,6 +108,16 @@ header {
 			}
 		}
 	}
+
+	.main-nav {
+		li {
+			display: inline-block;
+
+			&:not(:last-child) {
+				margin-right: 19px;
+			}
+		}
+	}
 }
 
 @media (min-width: 1231px) {
@@ -171,16 +148,30 @@ header {
 
 	.index header.header-style,
 	.inner header {
-		header.header-style {
-			background-color: $c6;
-		}
+		background-color: $c6;
+	}
+
+	.header__bl-1 {
+		position: relative;
+	}
+
+	.header__bl-2,
+	.header__nav,
+	.header__btn,
+	.header__lang {
+		display: none;
+	}
+
+	.header__bl-1,
+	.toggle-btn {
+		z-index: 999;
 	}
 
 	.toggle-wrapper,
 	.toggle-btn {
 		position: relative;
 		width: 20px;
-		height: 20px;
+		height: 12px;
 		display: inline-block;
 	}
 
@@ -199,7 +190,7 @@ header {
 		visibility: hidden;
 		transform: scaleY(0);
 		transform-origin: top;
-		background-color: $c4;
+		background: $c6 url(../img/ukraine-map-2.svg) no-repeat calc(100% - mp(50, 1200)) calc(100% - 60px);
 		@include trs-all;
 
 		>div {
@@ -210,58 +201,23 @@ header {
 			justify-content: center;
 			align-items: center;
 			height: 100%;
-			padding: 70px 15px;
+			padding: 76px mp(50, 1200);
 			text-align: center;
-			overflow-y: auto;
+
+			.header__nav,
+			.header__lang {
+				display: block;
+			}
+
+			.header__btn {
+				display: inline-block;
+			}
 		}
 
 		&.content-visible {
 			opacity: 1;
 			visibility: visible;
 			transform: scaleY(1);
-		}
-
-		.lang,
-		.header__contacts-wrapper,
-		.navigation {
-			display: block;
-		}
-
-		.navigation {
-			li {
-				display: block;
-				margin-right: 0;
-
-				&:not(:last-child) {
-					margin-right: 0;
-					margin-bottom: 20px;
-				}
-			}
-
-			a {
-				font-size: fsz(26, 12);
-				font-weight: 900;
-			}
-
-			&+.contacts-wrapper {
-				margin-top: 35px;
-			}
-		}
-
-		.header__contacts-wrapper {
-			>div {
-				display: block;
-
-				&:not(:last-child) {
-					margin-bottom: 20px;
-				}
-			}
-		}
-
-		.phones {
-			a {
-				font-size: fsz(18, 12);
-			}
 		}
 	}
 
@@ -276,7 +232,7 @@ header {
 		span {
 			position: absolute;
 			left: 0;
-			height: 3px;
+			height: 2px;
 			width: 100%;
 			background-color: $c1;
 			@include trs;
@@ -289,7 +245,7 @@ header {
 
 			&:nth-child(2),
 			&:nth-child(3) {
-				top: 9px;
+				top: 5px;
 			}
 
 			&:nth-child(4) {
@@ -327,5 +283,50 @@ header {
 				transform: translateX(-40px);
 			}
 		}
+	}
+
+	.header__lang+.main-nav {
+		margin-top: auto;
+	}
+
+	.main-nav {
+
+		margin-bottom: auto;
+
+		li {
+			&:not(:last-child) {
+				margin-bottom: 47px;
+			}
+		}
+
+		a {
+			font-size: fsz(25, 12);
+			line-height: 1;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.toggle__content {
+		padding-left: mp(40, 1024);
+		padding-right: mp(40, 1024);
+		background-position: calc(100% - mp(40, 1024)) calc(100% - 60px);
+	}
+}
+
+@media (max-width: 576px) {
+	.toggle__content {
+		padding-left: 20px;
+		padding-right: 20px;
+		background-position: calc(100% - 20px) calc(100% - 20px);
+	}
+}
+
+@media (max-width: 360px) {
+	.toggle__content {
+		padding-left: 15px;
+		padding-right: 15px;
+		background-position: calc(100% - 15px) calc(100% - 15px);
+		background-size: calc(100% - 30px) auto;
 	}
 }
