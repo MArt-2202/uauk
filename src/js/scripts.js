@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	modal();
 	toggleContent();
 	svgMap({
-		container: '.top-section',
+		container: '#top-section__map',
 		width: 1237,
 		height: 976,
 		svgClass: 'top-section__img top-section__img-2',
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		animatedClass: ['show', 'show-markers'],
 	});
 	svgMap({
-		container: '.top-section',
+		container: '#top-section__map',
 		width: 1237,
 		height: 976,
 		svgClass: 'top-section__img top-section__img-1',
