@@ -3,6 +3,7 @@ header {
 	left: 0;
 	z-index: 998;
 	width: 100%;
+	opacity: 0;
 
 	.container {
 		display: flex;
@@ -88,7 +89,6 @@ header {
 @media (min-width: 1201px) {
 	header {
 		position: absolute;
-		opacity: 0;
 
 		.container {
 			position: relative;
@@ -154,12 +154,25 @@ header {
 @media (max-width: 1200px) {
 	header {
 		position: fixed;
-		background-color: $c6;
 
 		.container {
 			padding-top: 15px;
 			padding-bottom: 15px;
 			justify-content: space-between;
+		}
+	}
+
+	.index,
+	.inner {
+		header {
+			opacity: 1;
+		}
+	}
+
+	.index header.header-style,
+	.inner header {
+		header.header-style {
+			background-color: $c6;
 		}
 	}
 
