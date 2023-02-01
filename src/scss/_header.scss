@@ -186,6 +186,8 @@ header {
 		width: 100%;
 		bottom: 0;
 		z-index: 998;
+		padding-left: mp(50, 1200);
+		padding-right: mp(50, 1200);
 		opacity: 0;
 		visibility: hidden;
 		transform: scaleY(0);
@@ -196,13 +198,14 @@ header {
 		>div {
 			position: relative;
 			z-index: 1;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+			display: grid;
+			grid-template-columns: 1fr;
+			align-content: space-between;
 			height: 100%;
-			padding: 76px mp(50, 1200);
+			padding-top: 76px;
+			padding-bottom: 76px;
 			text-align: center;
+			overflow-y: auto;
 
 			.header__nav,
 			.header__lang {
@@ -211,6 +214,7 @@ header {
 
 			.header__btn {
 				display: inline-block;
+				justify-self: center;
 			}
 		}
 
@@ -286,12 +290,11 @@ header {
 	}
 
 	.header__lang+.main-nav {
-		margin-top: auto;
+		margin-top: 20px;
 	}
 
 	.main-nav {
-
-		margin-bottom: auto;
+		margin-bottom: 20px;
 
 		li {
 			&:not(:last-child) {
@@ -341,7 +344,6 @@ header {
 
 		a {
 			font-size: fsz(20, 12);
-
 		}
 	}
 }
