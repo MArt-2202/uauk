@@ -81,6 +81,29 @@ export default function svgMap({
 
 							document.querySelector(container).append(svg);
 
+							if (
+								document.querySelector(container).offsetWidth > 1366 &&
+								svg.clientHeight >= document.querySelector(container).offsetHeight
+							) {
+								svg.classList.add('svg--responsive');
+								svg.style.bottom = `${
+									-svg.clientHeight + document.querySelector(container).offsetHeight
+								}px`;
+							}
+
+							if (
+								document.querySelector(container).offsetWidth <= 1366 &&
+								document.querySelector(container).offsetHeight <= 728
+							) {
+								svg.classList.add('svg--responsive');
+								svg.style.bottom = `${
+									-svg.clientHeight + document.querySelector(container).offsetHeight + 80
+								}px`;
+							} else {
+								svg.classList.remove('svg--responsive');
+								svg.style.bottom = '';
+							}
+
 							if (animatedTag && document.querySelector(animatedTag) && animatedClass) {
 								setTimeout(() => {
 									if (animatedClass[0]) {
@@ -88,14 +111,14 @@ export default function svgMap({
 											.querySelector(animatedTag)
 											.classList.add(`${animatedClass[0]}`);
 									}
-								}, 1000);
+								}, 500);
 								setTimeout(() => {
 									if (animatedClass[1]) {
 										document
 											.querySelector(animatedTag)
 											.classList.add(`${animatedClass[1]}`);
 									}
-								}, 2000);
+								}, 1000);
 							}
 						}
 					});
