@@ -115,8 +115,13 @@
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-}
 
+	&.svg--responsive {
+		top: auto;
+		bottom: 0;
+		max-width: 100%;
+	}
+}
 
 .top-section__img-2 {
 	&.show {
