@@ -81,6 +81,18 @@ header {
 		}
 	}
 
+	.index {
+		header {
+			.btn-default {
+				background-color: transparent;
+
+				&:hover {
+					background-color: $c8;
+				}
+			}
+		}
+	}
+
 	.header__bl-1 {
 		flex: none;
 		width: mp(338, 1200);
