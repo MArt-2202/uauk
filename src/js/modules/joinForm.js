@@ -1,28 +1,33 @@
-export default function joinForm() {
-	if (document.querySelector('#join-form')) {
-		const joinForm = document.querySelector('#join-form'),
+export default function joinForm({
+	formWrapper,
+	formSubmitBtn,
+	url,
+	dataAttr,
+	requiredSelector,
+	requiredClass,
+}) {
+	if (document.querySelector(formWrapper)) {
+		const form = document.querySelector(formWrapper),
 			sendData = {},
-			formData = new FormData(),
-			url = '/api/func/to_cart';
-		// url = 'https://jsonplaceholder.typicode.com/users/1/posts';
+			formData = new FormData();
 
-		if (document.querySelector('#join-form__submit')) {
-			const joinFormSubmit = document.querySelector('#join-form__submit');
-
-			joinFormSubmit.addEventListener('click', function (e) {
-				if (joinForm.querySelector('[required]')) {
-					joinForm.classList.add('has-required');
+		if (document.querySelector(formSubmitBtn)) {
+			document.querySelector(formSubmitBtn).addEventListener('click', function (e) {
+				if (requiredSelector && form.querySelector(requiredSelector)) {
+					form.classList.add(requiredClass);
 				}
 			});
 		}
 
-		joinForm.addEventListener('submit', function (e) {
+		form.addEventListener('submit', function (e) {
 			e.preventDefault();
 
-			if (document.querySelector('#join-form [data-key]')) {
-				document.querySelectorAll('#join-form [data-key]').forEach((el) => {
-					if (el.dataset.key !== '') {
-						sendData[el.dataset.key] = el.value;
+			if (form.querySelector(dataAttr)) {
+				form.querySelectorAll(dataAttr).forEach((el) => {
+					const key = dataAttr.match(/[^data\-\[\]]/gi).join('');
+
+					if (el.dataset[key] !== '') {
+						sendData[el.dataset[key]] = el.value;
 					}
 				});
 			}
@@ -46,10 +51,10 @@ export default function joinForm() {
 					document.querySelector('.modal-overlay.show').classList.add('dn');
 					document.querySelector('.modal-overlay.show').classList.remove('show');
 
-					joinForm.classList.remove('has-required');
+					form.classList.remove('has-required');
 
-					if (joinForm.querySelector('input')) {
-						joinForm.querySelectorAll('input').forEach((el) => {
+					if (form.querySelector('input')) {
+						form.querySelectorAll('input').forEach((el) => {
 							if (el.type !== 'RADIO' || el.type !== 'CHECKBOX') {
 								el.value = '';
 							}
