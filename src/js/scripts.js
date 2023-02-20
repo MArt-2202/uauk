@@ -7,6 +7,7 @@ import tabs from './modules/tabs';
 import sliders from './modules/sliders';
 import scrollToAnchor from './modules/scrollToAnchor';
 import modal from './modules/modal';
+import joinForm from './modules/joinForm';
 import toggleContent from './modules/toggleContent';
 import svgMap from './modules/svgMap';
 
@@ -33,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	scrollToAnchor();
 	modal();
+	joinForm();
 	toggleContent();
 	svgMap({
 		container: '#top-section__map',
