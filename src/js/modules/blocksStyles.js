@@ -60,4 +60,12 @@ export default function blockStyles() {
 
 		info.style.paddingBottom = `${info.offsetWidth / 1.97}px`;
 	}
+
+	if (document.querySelector('.form [data-required]')) {
+		document.querySelectorAll('.form [data-required]').forEach((el) => {
+			if (el.querySelector('span')) {
+				el.querySelector('span').insertAdjacentHTML('beforeend', `<sup>*</sup>`);
+			}
+		});
+	}
 }
