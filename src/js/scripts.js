@@ -34,7 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	sliders();
 	scrollToAnchor();
 	modal();
-	joinForm();
+	joinForm({
+		formWrapper: '#join-form',
+		formSubmitBtn: '#join-form__submit',
+		// url: 'https://jsonplaceholder.typicode.com/users/1/posts',
+		url: '/api/func/to_cart',
+		dataAttr: '[data-key]',
+		requiredSelector: '[required]',
+		requiredClass: 'has-required',
+	});
 	toggleContent();
 	svgMap({
 		container: '#top-section__map',
