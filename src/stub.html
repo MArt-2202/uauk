@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="HandheldFriendly" content="True">
+	<title>UaUk</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="img/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+	<link rel="icon" type="img/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
+	<link rel="icon" type="img/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="img/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			overflow: hidden;
+		}
+
+		.logo-company {
+			display: inline-block;
+			text-decoration: none;
+		}
+
+		.stub {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding: 30px 15px;
+			overflow-y: auto;
+			background: #1D2049 url(../img/ukraine-map-2.svg) no-repeat 50% 50%;
+			background-size: auto calc(100% - 80px);
+		}
+
+		@media(max-width: 415px) {
+			.stub {
+				background-size: calc(100% - 40px);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<main>
+		<div class="stub">
+			<div class="stub__content">
+				<div>
+					<a href="index.html" class="logo-company">
+						<img src="img/logo-company.svg" width="93" height="24" alt=" UaUk">
+					</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>
